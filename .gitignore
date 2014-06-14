@@ -1,0 +1,11 @@
+syntax: glob
+*~
+*.class
+*.jar
+*.war
+*.ear
+.springBeans
+.classpath
+.project
+.settings
+target/*

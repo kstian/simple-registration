@@ -1,0 +1,1 @@
+INSERT INTO tbl_account (id ,dob ,email ,first_name ,last_name ,mobileNumber, gender) VALUES (1, '2014-06-01 00:00:00', 'aaaaaa', 'aaaaaa', 'aaaaaa', '1111', 'male');
