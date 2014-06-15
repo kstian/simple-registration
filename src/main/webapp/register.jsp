@@ -28,9 +28,10 @@
 			            if(data.response.status=="error"){
 			            	$("#modal").addClass('hidden');
 						    $("#registerForm").removeClass('relative');
-						    $("#message").html(data.response.message);
+						    $(".message").html(data.response.message);
 			            }else{
 			            	$("#loginBox").removeClass('hidden');
+			            	$(".message2").html(data.response.status);
 			            }
 			        },
 			        error: function(jqXHR, textStatus, errorThrown)
@@ -47,7 +48,7 @@
 <div class="page-wrap">
 	<div id="registerBox" class="loading">
 		<form id="registerForm" action="/register.html" name="registerForm" method="post" >
-			<h1 id="message"><s:property value="message"/></h1>
+			<h1 class="message"><s:property value="message"/></h1>
 			<br /> <input class="validate[required,custom[phoneID]]" type="text"
 				name="account.mobileNumber" id="mobileNumber" placeholder="Mobile number" /><br />
 			<input class="validate[required,custom[onlyLetterSp]]" type="text"
@@ -55,6 +56,8 @@
 				class="validate[required,custom[onlyLetterSp]]" type="text"
 				name="account.lastName" id="lastname" placeholder="Last name" /><br /> <label>
 				<span>Date of birth:</span>
+				
+			<!-- the code below doesn't have to be like this -->
 			</label> <select name="date.month">
 				<option value="na">Month</option>
 				<option value="1">January</option>
@@ -212,11 +215,16 @@
 			<div id="modal" class="hidden"></div>
 		</form>
 		<br/>
-		<div id="loginBox" class="hidden"><input class="button" type="submit" value="Login" /></div>
+		<div id="loginBox" class="hidden">
+			<h1 class="message2"></h1><br/>
+			<form action="loginForm.html">
+				<input class="button" value="login" type="submit"></input>
+			</form>			
+		</div>
 	</div>
 	</div>
 	<div id="footer">
-		<h1>Footer</h1>
+		<s:include value="/commons/footer.jsp"></s:include>
 	</div>
 	
 </body>

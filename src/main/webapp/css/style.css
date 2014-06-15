@@ -39,8 +39,7 @@ html, body{
 	padding-top:20px;
 }
 
-
-#registerBox h1{
+.message{
 margin-top: 0px;
 	margin-bottom: 2px;
 	font: 20px Georgia, "Times New Roman", Times, serif;
@@ -75,7 +74,7 @@ margin-top: 0px;
   overflow: auto;
 }
 
-input[type="email"],input[type="password"],input[type="text"]{
+input[type="email"],input[type="password"],input[type="text"], input[type="password"]{
   width:92%;
   background:#fff;
   margin-bottom:4%;

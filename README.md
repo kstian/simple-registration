@@ -10,3 +10,8 @@ How to
 2. run mvn compile
 2. run mvn jetty:run
 3. open your browser and go to http://localhost:8080
+
+Demo
+----
+
+http://registration-kustian.rhcloud.com/

@@ -23,6 +23,9 @@
 				</param>
 			</result>
 		</action>
+		<action name="loginForm" class="com.codapayments.registration.action.Login">
+			<result>/login.jsp</result>
+		</action>
 	</package>
 
 	<!-- Add addition packages and configuration here. -->
